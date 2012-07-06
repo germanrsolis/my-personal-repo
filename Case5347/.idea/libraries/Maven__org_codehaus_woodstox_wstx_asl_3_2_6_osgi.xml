@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.codehaus.woodstox:wstx-asl:3.2.6-osgi">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/woodstox/wstx-asl/3.2.6-osgi/wstx-asl-3.2.6-osgi.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/woodstox/wstx-asl/3.2.6-osgi/wstx-asl-3.2.6-osgi-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/woodstox/wstx-asl/3.2.6-osgi/wstx-asl-3.2.6-osgi-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

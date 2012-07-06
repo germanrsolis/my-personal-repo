@@ -8,8 +8,8 @@
 package org.mule.case5347;
 
 import org.mule.api.MuleMessage;
-import org.mule.api.client.MuleClient;
-import org.mule.tck.junit4.FunctionalTestCase;
+import org.mule.module.client.MuleClient;
+import org.mule.tck.FunctionalTestCase;
 import org.mule.transport.NullPayload;
 
 import org.junit.Test;
@@ -29,12 +29,13 @@ public class Case5347TestCase extends FunctionalTestCase
     }
 
     @Test
-    public void case5347() throws Exception
+    public void testCase5347() throws Exception
     {
         String payload = IOUtils.getResourceAsString("Sample_MaterialProductionMessage.xml", this.getClass());
 
 
-        MuleClient client = muleContext.getClient();
+        MuleClient client = new MuleClient(muleContext);
+
         client.dispatch("vm://in", payload, null);
 
 

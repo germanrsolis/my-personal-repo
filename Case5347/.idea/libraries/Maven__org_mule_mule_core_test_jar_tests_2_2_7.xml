@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.mule:mule-core:test-jar:tests:2.2.7">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/mule/mule-core/2.2.7/mule-core-2.2.7-tests.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/mule/mule-core/2.2.7/mule-core-2.2.7-test-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/mule/mule-core/2.2.7/mule-core-2.2.7-test-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

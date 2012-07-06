@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: javax.script:script-api:jdk14:1.0-osgi">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/script/script-api/1.0-osgi/script-api-1.0-osgi-jdk14.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/script/script-api/1.0-osgi/script-api-1.0-osgi-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/script/script-api/1.0-osgi/script-api-1.0-osgi-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
