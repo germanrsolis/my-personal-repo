@@ -36,10 +36,17 @@
     -->
     <flow name="main">
         <vm:inbound-endpoint path="in"/>
+    <flow name="periodicSync" >
+        <quartz:inbound-endpoint jobName="job" repeatInterval="60000 " startDelay="15000" >
+            <quartz:event-generator-job>
+                <quartz:payload>${periodicSync.quartz.payload}</quartz:payload>
+            </quartz:event-generator-job>
+        </quartz:inbound-endpoint>
 
         <!-- TODO add your service component here. This can also be a Spring bean using <spring-object bean="name"/> -->
         <test:component appendString=" Received"/>
 
         <vm:outbound-endpoint path="out"/>
+        <logger message="test" level="INFO" />
     </flow>
 </mule>
