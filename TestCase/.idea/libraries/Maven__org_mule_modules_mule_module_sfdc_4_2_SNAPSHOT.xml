@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: org.mule.modules:mule-module-sfdc:4.2-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/mule/modules/mule-module-sfdc/4.2-SNAPSHOT/mule-module-sfdc-4.2-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/mule/modules/mule-module-sfdc/4.2-SNAPSHOT/mule-module-sfdc-4.2-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/mule/modules/mule-module-sfdc/4.2-SNAPSHOT/mule-module-sfdc-4.2-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/mule/modules/mule-module-sfdc/4.2-SNAPSHOT/mule-module-sfdc-4.2-SNAPSHOT.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,174 @@
+<ProductionPerformance xmlns="http://www.wbf.org/xml/B2MML-V0401" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>5003704</ID>
+  <Description>5003704 Produced</Description>
+  <Location>
+    <EquipmentID>12</EquipmentID>
+    <EquipmentElementLevel>Site</EquipmentElementLevel>
+    <Location>
+      <EquipmentID>1282</EquipmentID>
+      <EquipmentElementLevel>Area</EquipmentElementLevel>
+    </Location>
+  </Location>
+  <PublishedDate>2012-07-03T12:14:51.613+12:00</PublishedDate>
+  <ProductionScheduleID>5003704</ProductionScheduleID>
+  <ProductionResponse>
+    <ID>100000000000000845</ID>
+    <Location>
+      <EquipmentID>4</EquipmentID>
+      <EquipmentElementLevel>ProductionLine</EquipmentElementLevel>
+    </Location>
+    <SegmentResponse>
+      <ID>100000000000000845</ID>
+      <ProductionData>
+        <ID>PALLET_ID</ID>
+        <Value>
+          <ValueString>12824000015</ValueString>
+          <DataType xsi:nil="true"/>
+          <UnitOfMeasure xsi:nil="true"/>
+        </Value>
+      </ProductionData>
+      <ProductionData>
+        <ID>PIC_ID</ID>
+        <Value>
+          <ValueString>5018</ValueString>
+          <DataType xsi:nil="true"/>
+          <UnitOfMeasure xsi:nil="true"/>
+        </Value>
+      </ProductionData>
+      <ProductionData>
+        <ID>LABEL_FORMAT</ID>
+        <Value>
+          <ValueString>4</ValueString>
+          <DataType xsi:nil="true"/>
+          <UnitOfMeasure xsi:nil="true"/>
+        </Value>
+      </ProductionData>
+      <ProductionData>
+        <ID>SEASON</ID>
+        <Value>
+          <ValueString>2012</ValueString>
+          <DataType xsi:nil="true"/>
+          <UnitOfMeasure xsi:nil="true"/>
+        </Value>
+      </ProductionData>
+      <ProductionData>
+        <ID>PACKED_DATE</ID>
+        <Value>
+          <ValueString>2012-07-03T12:14:43.910+12:00</ValueString>
+          <DataType xsi:nil="true"/>
+          <UnitOfMeasure xsi:nil="true"/>
+        </Value>
+      </ProductionData>
+      <ProductionData>
+        <ID>CONTRACT_ID</ID>
+        <Value>
+          <ValueString>5003704</ValueString>
+          <DataType xsi:nil="true"/>
+          <UnitOfMeasure xsi:nil="true"/>
+        </Value>
+      </ProductionData>
+      <ProductionData>
+        <ID>OWNER_CLASS</ID>
+        <Value>
+          <ValueString>NZDB</ValueString>
+          <DataType xsi:nil="true"/>
+          <UnitOfMeasure xsi:nil="true"/>
+        </Value>
+      </ProductionData>
+      <ProductionData>
+        <ID>QUALITY_CODE</ID>
+        <Value>
+          <ValueString>Z</ValueString>
+          <DataType xsi:nil="true"/>
+          <UnitOfMeasure xsi:nil="true"/>
+        </Value>
+      </ProductionData>
+      <ProductionData>
+        <ID>MANUFACTURE_DATE</ID>
+        <Value>
+          <ValueString>2012-03-07T12:00:00.000+13:00</ValueString>
+          <DataType xsi:nil="true"/>
+          <UnitOfMeasure xsi:nil="true"/>
+        </Value>
+      </ProductionData>
+      <ProductionData>
+        <ID>CYPHER</ID>
+        <Value>
+          <ValueString>LW03</ValueString>
+          <DataType xsi:nil="true"/>
+          <UnitOfMeasure xsi:nil="true"/>
+        </Value>
+      </ProductionData>
+      <ProductionData>
+        <ID>INGREDIENT_NZ_ORIGIN</ID>
+        <Value>
+          <ValueString>Y</ValueString>
+          <DataType xsi:nil="true"/>
+          <UnitOfMeasure xsi:nil="true"/>
+        </Value>
+      </ProductionData>
+      <ProductionData>
+        <ID>PALLET_CONFIG</ID>
+        <Value>
+          <ValueString>20</ValueString>
+          <DataType xsi:nil="true"/>
+          <UnitOfMeasure xsi:nil="true"/>
+        </Value>
+      </ProductionData>
+      <ProductionData>
+        <ID>PACK_TYPE</ID>
+        <Value>
+          <ValueString>N</ValueString>
+          <DataType xsi:nil="true"/>
+          <UnitOfMeasure xsi:nil="true"/>
+        </Value>
+      </ProductionData>
+      <ProductionData>
+        <ID>PLANT</ID>
+        <Value>
+          <ValueString>1</ValueString>
+          <DataType xsi:nil="true"/>
+          <UnitOfMeasure xsi:nil="true"/>
+        </Value>
+      </ProductionData>
+      <MaterialActual>
+        <MaterialDefinitionID>00105330</MaterialDefinitionID>
+        <MaterialLotID>5003704</MaterialLotID>
+        <MaterialSubLotID>L0451</MaterialSubLotID>
+        <MaterialUse>Produced</MaterialUse>
+        <Quantity>
+          <QuantityString>200.0</QuantityString>
+          <DataType>decimal</DataType>
+          <UnitOfMeasure>kg</UnitOfMeasure>
+          <Key>Weight</Key>
+        </Quantity>
+        <Quantity>
+          <QuantityString>20</QuantityString>
+          <DataType>decimal</DataType>
+          <UnitOfMeasure>EA</UnitOfMeasure>
+          <Key>Count</Key>
+        </Quantity>
+        <MaterialActualProperty>
+          <ID>PACK_NO</ID>
+          <Value>
+            <ValueString>1</ValueString>
+            <DataType xsi:nil="true"/>
+            <UnitOfMeasure xsi:nil="true"/>
+          </Value>
+        </MaterialActualProperty>
+        <MaterialActualProperty>
+          <ID>PHASE</ID>
+          <Value>
+            <ValueString>0020</ValueString>
+            <DataType xsi:nil="true"/>
+            <UnitOfMeasure xsi:nil="true"/>
+          </Value>
+        </MaterialActualProperty>
+      </MaterialActual>
+    </SegmentResponse>
+  </ProductionResponse>
+  <Any>
+    <EIG>EVENT_ID=10006</EIG>
+    <EIG>VERB=UPDATE</EIG>
+  </Any>
+</ProductionPerformance>

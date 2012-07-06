@@ -14,6 +14,7 @@
       xmlns:scripting="http://www.mulesoft.org/schema/mule/scripting"
       xmlns:sxc="http://www.mulesoft.org/schema/mule/sxc"
       xmlns:mule-xml="http://www.mulesoft.org/schema/mule/xml"
+      xmlns:sfdc="http://www.mulesoft.org/schema/mule/sfdc"
     xsi:schemaLocation="
         http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/3.2/mule.xsd
         http://www.mulesoft.org/schema/mule/test http://www.mulesoft.org/schema/mule/test/3.2/mule-test.xsd
@@ -28,18 +29,62 @@
         http://www.mulesoft.org/schema/mule/scripting http://www.mulesoft.org/schema/mule/scripting/3.2/mule-scripting.xsd
         http://www.mulesoft.org/schema/mule/sxc http://www.mulesoft.org/schema/mule/sxc/3.2/mule-sxc.xsd
         http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/3.2/mule-xml.xsd
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.mulesoft.org/schema/mule/sfdc http://www.mulesoft.org/schema/mule/sfdc/4.0/mule-sfdc.xsd">
 
-    <!--
-    TODO: You can define a test configuration here then from the TestCaseTestCase you can fire events into
-    Mule (using the MuleClient) and then assert the results.
-    -->
+    <sfdc:config name="Salesforce" username="hackathon.user@mulesoft.com.dev" password="Muleftw1"
+                 securityToken="L9hLuVIlQHCylNtBe3cclW6S"
+                 url="https://test.salesforce.com/services/Soap/u/24.0" />
     <flow name="main">
         <vm:inbound-endpoint path="in"/>
 
-        <!-- TODO add your service component here. This can also be a Spring bean using <spring-object bean="name"/> -->
-        <test:component appendString=" Received"/>
+        <sfdc:publish-topic name="AccountUpdates" query="SELECT Id, Phone, Name FROM Account" retryMax=""/>
 
-        <vm:outbound-endpoint path="out"/>
+        <vm:outbound-endpoint path="out" />
+
+    </flow>
+
+    <flow name="test" >
+        <sfdc:subscribe-topic topic="AccountUpdates" />
+
+        <logger level="INFO" message="UPDATE: #[payload]" />
+
+    </flow>
+
+    <flow name="updateFlow" >
+        <http:inbound-endpoint address="http://localhost:9999/test" />
+
+        <sfdc:query-single query="SELECT Id, Phone, Name FROM Account" />
+
+        <logger level="INFO" message="#[payload]" />
+
+        <collection-splitter />
+
+        <vm:outbound-endpoint path="updateSFDC" />
+
+    </flow>
+
+    <flow name="updateSFDC" >
+        <vm:inbound-endpoint path="updateSFDC" />
+        <scripting:transformer >
+            <scripting:script engine="groovy" file="">
+                <scripting:text>
+                    payload.put('Phone', '222');
+                    return payload;
+                </scripting:text>
+            </scripting:script>
+        </scripting:transformer>
+        <logger level="INFO" message="PAYLOAD: #[payload]" />
+
+        <sfdc:update type="Account">
+            <sfdc:objects  >
+                <sfdc:object>
+                    <sfdc:inner-object key="Id" value-ref="#[map-payload:Id]" />
+                    <sfdc:inner-object key="Phone" value-ref="#[map-payload:Phone]" />
+                </sfdc:object>
+            </sfdc:objects>
+        </sfdc:update>
+        <logger level="INFO" message="PAYLOAD: #[payload]" />
+
     </flow>
 </mule>
